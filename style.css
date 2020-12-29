@@ -34,10 +34,13 @@ label.logo {
   box-sizing: border-box;
 }
 
+nav {
+  flex-wrap: wrap;
+}
+
 nav #icon {
   color: white;
-  line-height: 80px;
-  float: 100px;
+  float: right;
   margin-right: 100px;
   display: none;
   position: absolute;
@@ -51,8 +54,7 @@ nav #icon {
 
 @media (max-width: 1000px) {
   nav #icon {
-    display: inline-block;
-    margin-left: 0;
+    display: block;
   }
   nav ul {
     position: fixed;
@@ -62,6 +64,8 @@ nav #icon {
     left: -100%;
     text-align: center;
     transform: all 0.5s;
+    display: none;
+    flex-direction: column;
   }
   nav li {
     display: block;
