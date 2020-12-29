@@ -21,7 +21,7 @@ footer {
 }
 
 label.logo {
-  font-family: Crimson Pro;
+  font-family: Crimson;
   font-style: normal;
   font-weight: 200;
   font-size: 14px;
@@ -32,6 +32,49 @@ label.logo {
   line-height: 80px;
   border: 1px solid #ffffff;
   box-sizing: border-box;
+}
+
+nav #icon {
+  color: white;
+  line-height: 80px;
+  float: 100px;
+  margin-right: 100px;
+  display: none;
+  position: absolute;
+}
+
+@media (max-width: 1311px) {
+  body {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  nav #icon {
+    display: inline-block;
+    margin-left: 0;
+  }
+  nav ul {
+    position: fixed;
+    widows: 100%;
+    height: 100vh;
+    background: #181719;
+    left: -100%;
+    text-align: center;
+    transform: all 0.5s;
+  }
+  nav li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  a:hover {
+    border: none;
+    color: #333333;
+  }
+  nav ul.show {
+    left: 0;
+  }
 }
 
 nav {
@@ -63,11 +106,13 @@ nav a {
 
 a:hover {
   font-weight: bold;
+  transform: 0.5s;
 }
 
 /*MAIN HOMEPAGE*/
 
 .main__inf {
+  position: relative;
   display: grid;
   grid-template-columns: 50% 50%;
 }
